@@ -5,13 +5,13 @@ using UnityEngine;
 public class Player : MonoBehaviour {
 
     [Tooltip("In meter/s")] [SerializeField] float speed = 30f;
-    [Tooltip("In meters")] [SerializeField] float xRange = 14f;
-    [Tooltip("In meters")] [SerializeField] float yRange = 8f;
+    [Tooltip("In meters")] [SerializeField] float xRange = 20f;
+    [Tooltip("In meters")] [SerializeField] float yRange = 11f;
 
     [SerializeField] float positionPitchFactor = -5f;
-    [SerializeField] float positionYawFactor = 5f;
+    [SerializeField] float positionYawFactor = 3.5f;
     [SerializeField] float controlPitchFactor = -10f;
-    [SerializeField] float controlRollFactor = -20f;
+    [SerializeField] float controlRollFactor = -25f;
     float xThrow, yThrow;
 
     // Start is called before the first frame update
