@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -8,6 +9,7 @@ public class PlayerController : MonoBehaviour {
     [Tooltip("In meter/s")] [SerializeField] float controlSpeed = 30f;
     [Tooltip("In meters")] [SerializeField] float xRange = 20f;
     [Tooltip("In meters")] [SerializeField] float yRange = 11f;
+    [SerializeField] GameObject[] guns;
 
     [Header("Screen-position based")]
     [SerializeField] float positionPitchFactor = -5f;
@@ -24,6 +26,7 @@ public class PlayerController : MonoBehaviour {
         if (isControlEnabled) {
             ProcessTranslation();
             ProcessRotation();
+            ProcessFiring();
         }
 
     }
@@ -52,6 +55,27 @@ public class PlayerController : MonoBehaviour {
         float roll = xThrow * controlRollFactor;
 
         transform.localRotation = Quaternion.Euler(pitch, yaw, roll);
+    }
+
+    private void ProcessFiring() {
+        if (Input.GetButton("Fire1")) {
+            ActivateGuns();
+        } else {
+            DeactivateGuns();
+        }
+
+    }
+
+    private void ActivateGuns() {
+        foreach (GameObject gun in guns) {
+            gun.SetActive(true);
+        }
+    }
+
+    private void DeactivateGuns() {
+        foreach (GameObject gun in guns) {
+            gun.SetActive(false);
+        }
     }
 
     private void OnPlayerDeath() { //called by string reference
