@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static UnityEngine.ParticleSystem;
 
 public class PlayerController : MonoBehaviour {
 
@@ -59,25 +60,19 @@ public class PlayerController : MonoBehaviour {
 
     private void ProcessFiring() {
         if (Input.GetButton("Fire1")) {
-            ActivateGuns();
+            SetGunsActive(true);
         } else {
-            DeactivateGuns();
+            SetGunsActive(false);
         }
 
     }
 
-    private void ActivateGuns() {
+    private void SetGunsActive(bool isActive) {
         foreach (GameObject gun in guns) {
-            gun.SetActive(true);
+            EmissionModule emissionModule = gun.GetComponent<ParticleSystem>().emission;
+            emissionModule.enabled = isActive;
         }
     }
-
-    private void DeactivateGuns() {
-        foreach (GameObject gun in guns) {
-            gun.SetActive(false);
-        }
-    }
-
     private void OnPlayerDeath() { //called by string reference
         isControlEnabled = false;
     }
