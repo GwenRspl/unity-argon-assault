@@ -636,6 +636,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathFx: {fileID: 626756425886058413, guid: 1e3e1b2dee568cc42b5779771e5a2c96, type: 3}
   parent: {fileID: 1561802652}
+  scorePerHit: 12
 --- !u!1001 &354399719
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -766,6 +767,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathFx: {fileID: 626756425886058413, guid: 1e3e1b2dee568cc42b5779771e5a2c96, type: 3}
   parent: {fileID: 1561802652}
+  scorePerHit: 20
 --- !u!1 &792953873
 GameObject:
   m_ObjectHideFlags: 0
@@ -816,6 +818,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathFx: {fileID: 626756425886058413, guid: 1e3e1b2dee568cc42b5779771e5a2c96, type: 3}
   parent: {fileID: 1561802652}
+  scorePerHit: 12
 --- !u!1 &856123145
 GameObject:
   m_ObjectHideFlags: 0
@@ -1008,6 +1011,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathFx: {fileID: 626756425886058413, guid: 1e3e1b2dee568cc42b5779771e5a2c96, type: 3}
   parent: {fileID: 1561802652}
+  scorePerHit: 12
 --- !u!1 &944631407 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1062015658370612, guid: e18a33b201b7d4b41a22a039bc5602bb,
@@ -1028,6 +1032,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathFx: {fileID: 626756425886058413, guid: 1e3e1b2dee568cc42b5779771e5a2c96, type: 3}
   parent: {fileID: 1561802652}
+  scorePerHit: 12
 --- !u!1 &1000976210
 GameObject:
   m_ObjectHideFlags: 0
@@ -1076,10 +1081,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -1534,6 +1539,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathFx: {fileID: 626756425886058413, guid: 1e3e1b2dee568cc42b5779771e5a2c96, type: 3}
   parent: {fileID: 1561802652}
+  scorePerHit: 12
 --- !u!1 &1591785879
 GameObject:
   m_ObjectHideFlags: 0
@@ -1808,6 +1814,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathFx: {fileID: 626756425886058413, guid: 1e3e1b2dee568cc42b5779771e5a2c96, type: 3}
   parent: {fileID: 1561802652}
+  scorePerHit: 20
 --- !u!1001 &1767738885
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2068,6 +2075,7 @@ GameObject:
   - component: {fileID: 1974873052}
   - component: {fileID: 1974873054}
   - component: {fileID: 1974873053}
+  - component: {fileID: 1974873055}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -2134,6 +2142,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1974873051}
   m_CullTransparentMesh: 0
+--- !u!114 &1974873055
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1974873051}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 450365573d1dc3f488e608a8739af76c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2002558940
 GameObject:
   m_ObjectHideFlags: 0
