@@ -12,7 +12,7 @@ public class CollisionHandler : MonoBehaviour {
     private void OnTriggerEnter(Collider other) {
         StartDeathSequence();
         deathFX.SetActive(true);
-        Invoke("ReloadScene", 1f);
+        Invoke("ReloadScene", levelLoadDelay);
     }
 
     private void StartDeathSequence() {

@@ -6,7 +6,12 @@ using UnityEngine.SceneManagement;
 public class MusicPlayer : MonoBehaviour {
 
     private void Awake() {
-        DontDestroyOnLoad(gameObject);
+        int nbMusicPlayers = FindObjectsOfType<MusicPlayer>().Length;
+        if (nbMusicPlayers > 1) {
+            Destroy(gameObject);
+        } else {
+            DontDestroyOnLoad(gameObject);
+        }
     }
 
 }
