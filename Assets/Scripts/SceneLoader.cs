@@ -5,8 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class SceneLoader : MonoBehaviour {
     void Start() {
-        Invoke("LoadFirstScene", 3f);
 
+    }
+
+    private void Update() {
+        if (Input.GetButton("Submit")) {
+            LoadFirstScene();
+        }
     }
 
     void LoadFirstScene() {

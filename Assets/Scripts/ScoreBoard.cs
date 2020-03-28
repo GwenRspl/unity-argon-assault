@@ -12,7 +12,7 @@ public class ScoreBoard : MonoBehaviour {
 
 
     void Start() {
-        scoreText = GetComponent<Text>();
+        scoreText = GameObject.Find("Score").GetComponent<Text>();
         scoreText.text = score.ToString();
     }
 
