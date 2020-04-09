@@ -4,20 +4,16 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class ScoreBoard : MonoBehaviour {
-
-
-
     int score;
     Text scoreText;
 
-
-    void Start() {
-        scoreText = GameObject.Find("Score").GetComponent<Text>();
-        scoreText.text = score.ToString();
+    void Start () {
+        scoreText = GameObject.Find ("Score").GetComponent<Text> ();
+        scoreText.text = score.ToString ();
     }
 
-    public void ScoreHit(int scoreInscrease) {
+    public void ScoreHit (int scoreInscrease) {
         score += scoreInscrease;
-        scoreText.text = score.ToString();
+        scoreText.text = score.ToString ();
     }
 }
